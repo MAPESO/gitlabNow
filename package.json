@@ -1,0 +1,13 @@
+{
+  "name": "gitlabnow",
+  "version": "1.0.0",
+  "description": "gitlab CI with now",
+  "main": "index.js",
+  "repository": "git@github.com:MAPESO/gitlabNow.git",
+  "author": "Mark Pena <markdrew53@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node ."
+  }
+}
