@@ -2,7 +2,7 @@ const { createServer } = require('http')
 
 const port = process.env.NODE_ENV || 3000
 const server = createServer((req, res) => {
-    res.end('<h1>Holi Github !!</h1>')
+    res.end('<h1>GitLab CI desde GitHub !!</h1>')
 })
 
 server.listen(port, err => {
