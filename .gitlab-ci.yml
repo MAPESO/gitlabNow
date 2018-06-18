@@ -14,7 +14,7 @@ deploy_now:
   stage: deploy
   script: now -p -t $NOW_TOKEN
   only:
-    - branches
+    - pushes
   script: now -p -t $NOW_TOKEN && now alias -t $NOW_TOKEN
   only:
     - master
