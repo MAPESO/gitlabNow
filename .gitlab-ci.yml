@@ -12,9 +12,11 @@ stages:
 
 deploy_now:
   stage: deploy
+  only:
+    refs:
+      - pushes
   script: now -p -t $NOW_TOKEN
   only:
-    - branches
-  script: now -p -t $NOW_TOKEN && now alias -t $NOW_TOKEN
-  only:
-    - master
+    refs:
+      - master
+  script:  now -p -t $NOW_TOKEN && now alias -t $NOW_TOKKEN
