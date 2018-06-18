@@ -1,20 +1,19 @@
-image: node:latest
+image: node:latest # basically tells GitLab to use Node.js docker runner to deploy the app to Now on every push. 
+
+before_script:
+  - npm i -g --unsafe-perm now # Install Now CLI on GitLab CI
 
 cache:
   paths:
     - node_modules/ # This will tell GitLab CI to cache the dependencies
 
-before_script: 
-  - npm install now --no-save # Install Now CLI on GitLab CI
-
 stages:
   - deploy
 
 deploy_now:
-  script: now -t $NOW_TOKEN
   stage: deploy
+  script: now -p -t $NOW_TOKEN
   only:
     refs:
       - master
       - pushes
-    kubernetes : active
