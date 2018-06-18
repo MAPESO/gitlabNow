@@ -16,3 +16,7 @@ deploy_now:
     refs:
       - pushes
   script: now -p -t $NOW_TOKEN
+  only:
+    refs:
+      - master
+  script:  now -p -t $NOW_TOKEN && now alias -t $NOW_TOKKEN
