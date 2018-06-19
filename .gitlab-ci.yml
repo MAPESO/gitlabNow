@@ -14,6 +14,7 @@ deploy_now:
   stage: deploy
   only:
     - pushes
+    - branches
   except:
     - master
   script: now -p -t $NOW_TOKEN
