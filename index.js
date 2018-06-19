@@ -10,6 +10,9 @@ const server = createServer((req, res) => {
         <p>
             Finalmente al momento de hacer push a branche master, se desencadena el pipeline "deploy_now_production" (deploy production)
         </p>
+        <p>
+           Hola Sergio :)
+        </p>
     `)
 })
 
