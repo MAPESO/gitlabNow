@@ -16,6 +16,9 @@ const server = createServer((req, res) => {
         <p>
             :p
         </p>
+        <p>
+          NOW
+        </p>
     `)
 })
 
