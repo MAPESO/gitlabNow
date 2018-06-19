@@ -13,6 +13,9 @@ const server = createServer((req, res) => {
         <p>
            Hola Sergio :)
         </p>
+        <p>
+            :p
+        </p>
     `)
 })
 
