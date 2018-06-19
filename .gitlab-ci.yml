@@ -13,8 +13,7 @@ stages:
 deploy_now:
   stage: deploy
   only:
-      - branches
-      - pushes
+    - pushes
   except:
     - master
   script: now -p -t $NOW_TOKEN
@@ -23,7 +22,4 @@ deploy_now_production:
   stage: deploy
   only:
     - master
-  except:
-    - branches
-    - pushes
   script: now -p -t $NOW_TOKEN && now alias -t $NOW_TOKEN
